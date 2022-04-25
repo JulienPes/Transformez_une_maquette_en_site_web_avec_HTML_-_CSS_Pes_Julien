@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css"/>
     <link
-      href="https:fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700.800;900&display=swap"rel="stylesheet"/>
+      href="https:fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   </head>
@@ -22,15 +23,16 @@
      </header>   
       <!--------------------------------------------------     FORM     --------------------------------------------------->
      <section class="section_container">
-          <header><h1>Trouvez votre hébergement pour des vacances de rêve</h1></header>
-            <p>En plein centre ville ou en pleine nature</p>
+          <div class="media"><header><h1>Trouvez votre hébergement pour des vacances de rêve</h1></header>
+            <p class="media_p"> En plein centre ville ou en pleine nature</p>
               <form method="post" action="#">
                 <div class="icon_box">
                   <i class="fas fa-map-marker-alt"></i></div>
                    <input type="text" name="text" class="search" placeholder="Marseille,France" required />
-                   <input type="submit" name="submit" class="submit" value="Rechercher" />
+                   <div class="submit_box"> <input type="submit" name="submit" class="submit" value="Rechercher"><i id="search_icon" class="fas fa-search"></i></div>  
+                   
               </form>
-     
+              
       <!----------------------------------------------------    FILTER   --------------------------------------------------->
       
     <section class="filter_container">
@@ -41,9 +43,10 @@
             <button class="filter_btn"><div class="filter_text">Animaux autorisés</div><div class="filter_icon"><i class="fas fa-dog"></i></div></button>
     </section> 
             <div class="icon_info_section">
-              <i class="fal fa-info"></i>
+              <i class="fas fa-info"></i>
               <p class="info"> Plus de 500 logements sont disponibles dans cette ville</p>
          </div> 
+         </div>
         
        
         <!-----------------------------------------------------    MAIN   --------------------------------------------------->
@@ -51,7 +54,7 @@
           <div class="hebergements" id="Hébergements à Marseille">
               <section class="target_lodging">
                 <div class="categorie_title"><header><h2>Hébergements à Marseille</h2></header></div>
-                  <article>
+                  <article class="target_article">
                     <a href="#">
                       <figure class="target_figure">
                         <img class="target_img" src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Chambre Auberge avec lits superposés en métal">
@@ -69,7 +72,7 @@
                       </figure>
                     </a>
                   </article>
-                  <article>
+                  <article class="target_article">
                     <a href="#">
                       <figure class="target_figure">
                         <img class="target_img" src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Chambre d'hôtel avec 2 lits simples">
@@ -87,7 +90,7 @@
                       </figure>
                     </a>
                    </article>
-                   <article>
+                   <article class="target_article">
                      <a href="#">
                        <figure class="target_figure">
                          <img class="target_img" src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Chambre d'hôtel avec lit double">
@@ -105,7 +108,7 @@
                        </figure>
                      </a>
                     </article>
-                    <article>
+                    <article class="target_article">
                       <a href="#">
                         <figure class="target_figure">
                          <img class="target_img" src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Chambre d'hôtel avec lit double">
@@ -123,7 +126,7 @@
                         </figure>
                       </a>
                     </article>
-                    <article>
+                    <article class="target_article">
                       <a href="#">
                         <figure class="target_figure">
                          <img class="target_img" src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Chambre Auberge avec lits superposés en bois">
@@ -141,7 +144,7 @@
                         </figure>
                       </a>
                      </article>
-                     <article>
+                     <article class="target_article">
                        <a href="#">
                          <figure class="target_figure">
                           <img class="target_img" src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Chambre avec deux lits simples et télévision">
@@ -162,13 +165,13 @@
                     <p class="moretargetlodging">Afficher plus</p>
                    </section> 
                  <aside class="popular_lodging">
-                <header class="popular_header"><h2 class="categorie_title_2">Les plus populaires</h2><i class="fas fa-chart-line"></i></header>
+                <header class="popular_header"><h2 class="categorie_title_2">Les plus populaires</h2><div class="icon_pop"><i class="fas fa-chart-line"></i></div></header>
                  <article>
                    <a href="#">
                      <figure class="aside_figure">
                       <img class="aside_img" src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Chambre d'hôtel verte avec lit double">
                        <figcaption class="aside_figcaption">
-                         <h3>Hôtel Le soleil du <br> matin</h3>
+                         <h3>Hôtel Le soleil du matin</h3>
                          <p>Nuit à partir de 128<strong>€</strong></p>
                           <div class="stars_box"><div class="stars">
                           <i class="fas fa-star"></i>
@@ -222,20 +225,21 @@
               <section class="activities" id="Activités à Marseille">  
                <div class="activities_title"><header><h2>Activités à Marseille</h2></header></div>
                 <div class="activity_box">
-                 <article>
+                 <article class="article_img">
                    <a href="#">
                      <figure class="activity_figure">
-                      <img class="activity_img" src="images/activites/4_small__/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Bateaux dans le vieux port de Marseille">
+                      <img class="activity_img" src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Bateaux dans le vieux port de Marseille">
                        <figcaption class="activity_figcaption">
                          <h3>Vieux Port</h3>
                        </figcaption>
                      </figure>
                    </a>
                  </article>
+                 
                  <article class="double_article">
                   <a href="#">
                     <figure class="activity_figure">
-                     <img class="activity_img_fort" src="images/activites/4_small__/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues">
+                      <img class="activity_img_fort" src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues">
                       <figcaption class="activity_figcaption">
                         <h3>Fort de Pomègues</h3>          
                       </figcaption>
@@ -243,17 +247,17 @@
                   </a>
                 <a href="#">
                   <figure class="activity_figure">
-                  <img class="activity_img_island" src="images/activites/4_small__/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="îles du Frioul">
+                    <img class="activity_img_island" src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="îles du Frioul">
                    <figcaption class="activity_figcaption">
                      <h3>îles du Frioul</h3>          
                    </figcaption>
                  </figure>
                </a>
              </article>
-                <article>
+                <article class="article_img">
                   <a href="#">
                     <figure class="activity_figure">
-                     <img class="activity_img" src="images/activites/4_small__/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques">
+                      <img class="activity_img" src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques">
                       <figcaption class="activity_figcaption">
                         <h3>Parc National des Calanques</h3> 
                       </figcaption>
@@ -263,22 +267,23 @@
                 <article class="double_article">
                   <a href="#">
                     <figure class="activity_figure">
-                     <img class="activity_img_notre-dame" src="images/activites/4_small__/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Fort de Pomègues">
+                      <img class="activity_img_notre-dame" src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Fort de Pomègues">
                       <figcaption class="activity_figcaption">
                         <h3>Notre-Dame-de-la-Garde</h3>          
                       </figcaption>
                     </figure>
                   </a>
-                <a href="#">
-                  <figure class="activity_figure">
-                  <img class="activity_img_longchamp" src="images/activites/4_small__/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="îles du Frioul">
+                  <a href="#">
+                 <figure class="activity_figure">
+                  <img class="activity_img_longchamp" src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="îles du Frioul">
                    <figcaption class="activity_figcaption">
-                     <h3>Parc Longchamp</h3>          
+                     <h3>Parc Longchamp</h3>        
                    </figcaption>
                  </figure>
                </a>
              </article>
             </div>
+          </div>
           </section>
         </main>
       </div>
@@ -300,5 +305,5 @@
               <li><a class="footerlink" href="#">Nous contacter</a></li>
           </ul> 
         </footer>
-</body>
+   </body>
 </html>

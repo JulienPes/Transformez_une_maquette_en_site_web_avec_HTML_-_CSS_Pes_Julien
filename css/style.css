@@ -10,13 +10,19 @@
     --selectblue: #DEEBFF;
 }
 
-.global {
+body {
     max-width: 1400px;
     margin: auto;
 }
 
+.global {
+
+    margin: 0px 60px;
+}
+
 h1 {
     font-size: 22px;
+    margin-bottom: 13px;
 }
 
 h2 {
@@ -25,12 +31,16 @@ h2 {
 }
 
 h3 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
 }
 
 p {
     font-size: 15px;
+}
+
+.media_p {
+    margin-bottom: 20px;
 }
 
 li {
@@ -42,8 +52,6 @@ a {
     text-decoration: none;
     color: black;
 }
-
-/**********************************************    HEADER     ***********************************************/
 
 .header {
     display: flex;
@@ -75,7 +83,6 @@ a {
     width: 100px;
 }
 
-/**********************************************      FORM      *************************************************/
 .section_container {
     display: flex;
     gap: 25px;
@@ -96,15 +103,20 @@ form {
 .icon_info_section {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .search {
-    border-width: 0.1px;
-    border-color: #f2f2f230;
-    width: 250px;
+    border-color: rgba(211, 211, 211, 0.068);
     font-size: 18px;
     font-weight: 600;
     padding-left: 15px;
+    padding-right: 30px;
+
+}
+
+#search_icon {
+    display: none;
 }
 
 .submit {
@@ -118,7 +130,6 @@ form {
     padding: 16px;
     font-size: 18px;
     font-weight: 600;
-
 }
 
 .header_h2 {
@@ -126,11 +137,11 @@ form {
     align-items: center;
 }
 
-/**********************************************      FILTER      *************************************************/
 .filter_container {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
+    margin-top: 30px;
 }
 
 .filter_btn {
@@ -163,8 +174,6 @@ form {
     gap: 10px;
 }
 
-/**********************************************      MAIN      *************************************************/
-
 .main_box {
     display: flex;
     flex-direction: column;
@@ -176,10 +185,6 @@ form {
     font-size: 12px;
 }
 
-.stars_box {
-    padding-top: 25px;
-}
-
 .grey_stars {
     display: flex;
     color: rgba(128, 128, 128, 0.365);
@@ -189,15 +194,20 @@ form {
     display: flex;
 }
 
+.target_article {
+    flex: 0 0 28%;
+}
+
 .target_lodging {
     display: flex;
-    flex: 1 75%;
-    gap: 40px;
+    flex: 1 70%;
+    gap: 40px 10px;
     padding: 40px;
     margin-right: 55px;
     flex-wrap: wrap;
     background-color: var(--greybg);
     border-radius: 20px;
+    justify-content: space-between;
 }
 
 .moretargetlodging {
@@ -206,15 +216,10 @@ form {
 }
 
 .categorie_title {
-    display: flex;
-    align-self: flex-start;
-    flex-wrap: wrap;
     width: 100%;
 }
 
 .target_figure {
-    display: flex;
-    flex-direction: column;
     border-radius: 20px;
     background-color: white;
     box-shadow: 2px 2px 12px 8px rgba(0, 0, 0, 0.044);
@@ -223,8 +228,9 @@ form {
 
 .target_img {
     border-radius: 15px 15px 0 0;
-    height: 100px;
-    width: 244.3px;
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .target_figcaption {
@@ -243,6 +249,7 @@ form {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    flex: 1 30%;
     background-color: var(--greybg);
     border-radius: 20px;
     justify-content: space-between;
@@ -250,9 +257,6 @@ form {
 }
 
 .categorie_title_2 {
-    display: flex;
-    align-self: flex-start;
-    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -266,16 +270,17 @@ form {
 
 .aside_img {
     display: flex;
+    object-fit: cover;
     border-radius: 15px 0 0 15px;
-    height: 115px;
-    width: 115px;
+    height: 130px;
+    width: 40%;
 }
 
 .aside_figcaption {
     display: flex;
     flex-direction: column;
-    padding: 10px 20px 0 25px;
-    gap: 4px;
+    padding: 5px 20px 10px 20px;
+    justify-content: space-between;
 }
 
 .activities {
@@ -285,78 +290,82 @@ form {
 }
 
 .activities_title {
-    display: flex;
-    align-self: flex-start;
-    flex-wrap: wrap;
     width: 100%;
     padding-bottom: 30px;
+    align-self: flex-start;
 }
 
 .activity_box {
     display: flex;
-    justify-content: space-between;
-
+    gap: 40px;
 }
 
 .activity_figure {
-    display: flex;
-    flex-direction: column;
     border-radius: 15px;
     background-color: white;
     box-shadow: 2px 2px 12px 8px rgba(0, 0, 0, 0.044);
 }
 
 .activity_img {
-    display: flex;
     border-radius: 15px 15px 0 0;
     height: 400px;
-    width: 320px;
     box-shadow: 2px 2px 12px 8px rgba(0, 0, 0, 0.044);
+    width: 100%;
+    object-fit: cover;
+
 }
 
 .activity_figcaption {
     padding: 20px;
 }
 
+.article_img {
+    width: 25%;
+}
+
 .double_article {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 1 0 18%;
 }
 
 .activity_img_fort {
     display: flex;
+    object-fit: cover;
     border-radius: 15px 15px 0 0;
     height: 180px;
-    width: 320px;
+    width: 100%;
     box-shadow: 2px 2px 12px 8px rgba(0, 0, 0, 0.044);
 }
 
 .activity_img_island {
     display: flex;
+    object-fit: cover;
     border-radius: 15px 15px 0 0;
     height: 120px;
-    width: 320px;
+    width: 100%;
     box-shadow: 2px 2px 12px 8px rgba(0, 0, 0, 0.044);
 }
 
 .activity_img_notre-dame {
     display: flex;
+    object-fit: cover;
     border-radius: 15px 15px 0 0;
     height: 140px;
-    width: 320px;
+    width: 100%;
     box-shadow: 2px 2px 12px 8px rgba(0, 0, 0, 0.044);
 }
 
 .activity_img_longchamp {
     display: flex;
+    object-fit: cover;
     border-radius: 15px 15px 0 0;
     height: 160px;
-    width: 320px;
+    width: 100%;
     box-shadow: 2px 2px 12px 8px rgba(0, 0, 0, 0.044);
 }
 
-/**********************************************      FOOTER      *************************************************/
 .footer_box {
     display: flex;
     justify-content: space-between;
@@ -374,4 +383,282 @@ form {
 .footer_category {
     font-weight: 700;
     padding-bottom: 10px;
+}
+
+@media only screen and (max-width : 992px)and (min-width: 767px) {
+    body {
+        margin-left: 0px;
+    }
+
+    .global {
+        margin: 0px;
+    }
+
+    .media {
+        margin: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    .header_h2 {
+        contain: strict;
+    }
+
+    .header {
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 2px var(--greybg) solid;
+    }
+
+    #logo {
+        padding: 10px 0 0 40px;
+    }
+
+    .nav_bar :hover {
+        border-bottom: 1px solid var(--mainblue);
+    }
+
+    .aside_figure {
+        flex-direction: column;
+        width: 80%;
+
+    }
+
+    .aside_img {
+        height: 90px;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .aside_figcaption {
+        padding: 5px;
+    }
+
+    .nav_bar {
+        gap: 290px;
+    }
+
+    .nav_button {
+        font-size: 20px;
+    }
+
+    #search_icon {
+        display: flex;
+        background-color: var(--mainblue);
+        color: white;
+        border-radius: 12px;
+        padding: 17px;
+    }
+
+    .search {
+        padding: 0 0 0 13px;
+    }
+
+    .submit {
+        display: none;
+    }
+
+    .filter_container {
+        gap: 5px;
+    }
+
+    .icon_info_section {
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .icon_pop {
+        padding-right: 30px;
+    }
+
+    .popular_lodging {
+        padding: 20px 10px 20px 40px;
+        background-color: white;
+
+    }
+
+    .categorie_title_2 {
+        padding-bottom: 3px;
+    }
+
+    .target_lodging {
+        margin: 0px;
+        background-color: white;
+    }
+
+    .activities {
+        padding: 90px;
+        margin-top: 0px;
+    }
+
+    .activity_box {
+        flex-direction: column;
+    }
+
+    .activity_img {
+        height: 120px;
+    }
+
+    .article_img {
+        width: 100%;
+    }
+
+    .activity_img_fort {
+        height: 120px;
+    }
+
+    .activity_img_notre-dame {
+        height: 120px;
+    }
+
+    .activity_img_longchamp {
+        height: 120px;
+    }
+
+    .double_article {
+        gap: 40px;
+    }
+
+    .footer_box {
+        padding: 40px;
+    }
+
+    .footer_category {
+        padding: 20px 0 15px 0;
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    body {
+        margin-left: 0px;
+    }
+
+    .global {
+        margin: 0px;
+    }
+
+    .media {
+        margin: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .header {
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 2px var(--greybg) solid;
+    }
+
+    #logo {
+        padding: 10px 0 0 40px;
+    }
+
+    .nav_bar {
+        align-items: flex-end;
+        padding-bottom: 10px;
+        height: 35px;
+        gap: 100px;
+    }
+
+    .nav_button {
+        font-size: 18px;
+    }
+
+    .nav_bar :hover {
+        border-bottom: 1px solid var(--mainblue);
+    }
+
+    #search_icon {
+        display: flex;
+        background-color: var(--mainblue);
+        color: white;
+        border-radius: 12px;
+        padding: 17px;
+    }
+
+    .search {
+        padding: 0 0 0 13px;
+    }
+
+    .submit {
+        display: none;
+    }
+
+    .filter_container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .icon_info_section {
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    .hebergements {
+        flex-direction: column-reverse;
+    }
+
+    .popular_lodging {
+        padding: 30px 20px 20px 30px;
+        gap: 20px;
+        border-radius: 0%;
+    }
+
+    .target_lodging {
+        margin: 0px;
+        background-color: white;
+        flex-direction: column;
+    }
+
+    .activities {
+        padding: 40px;
+        margin-top: 0px;
+    }
+
+    .activity_box {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .activity_img {
+        height: 120px;
+    }
+
+    .article_img {
+        width: 100%;
+    }
+
+    .activity_img_fort {
+        height: 120px;
+    }
+
+    .activity_img_notre-dame {
+        height: 120px;
+    }
+
+    .activity_img_longchamp {
+        height: 120px;
+    }
+
+    .double_article {
+        gap: 40px;
+    }
+
+    .footer_box {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .footer_category {
+        padding: 20px 0 15px 0;
+    }
 }
