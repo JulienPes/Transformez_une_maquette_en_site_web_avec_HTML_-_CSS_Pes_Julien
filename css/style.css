@@ -56,8 +56,7 @@ a {
 
 .header {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -65,11 +64,6 @@ a {
     display: flex;
     gap: 50px;
     height: 90px;
-}
-
-.nav_bar :hover {
-    border-top: 1px solid var(--mainblue);
-    color: var(--mainblue);
 }
 
 .nav_button {
@@ -81,8 +75,9 @@ a {
     border-top: 2px solid white;
 }
 
-.nav_button:hover {
+.nav_bar :hover {
     border-top: 2px solid var(--mainblue);
+    color: var(--mainblue);
 }
 
 #logo {
@@ -178,7 +173,8 @@ form {
 }
 
 .filter_btn:hover {
-    transform: scale(1.02);
+    background-color: var(--greybg);
+    transition: ease 0.3s;
 }
 
 .filter_icon {
@@ -229,7 +225,7 @@ form {
 }
 
 .target_article {
-    flex: 0 0 30%;
+    flex: 30%;
 }
 
 .target_article:hover {
@@ -238,7 +234,7 @@ form {
 
 .target_lodging {
     display: flex;
-    flex: 1 70%;
+    flex: 70%;
     gap: 34px;
     padding: 35px;
     margin-right: 35px;
@@ -258,6 +254,7 @@ form {
     font-size: 18px;
     font-weight: 600;
     flex: auto;
+    width: 100%;
 }
 
 .categorie_title {
@@ -291,14 +288,17 @@ form {
 }
 
 .popular_lodging {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    flex: 1 30%;
+    flex: 30%;
     background-color: var(--greybg);
     border-radius: 20px;
-    justify-content: space-between;
     padding: 35px;
+}
+
+.popular_media {
+    display: flex;
+    flex-direction: column;
+    padding: 33px 0 0 0;
+    gap: 31px;
 }
 
 .aside_figure {
@@ -316,7 +316,7 @@ form {
     display: flex;
     object-fit: cover;
     border-radius: 15px 0 0 15px;
-    height: 116px;
+    height: 119px;
     width: 35%;
 }
 
@@ -340,7 +340,9 @@ form {
 
 .activity_box {
     display: flex;
-    width: 25%;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
 }
 
 
@@ -353,7 +355,7 @@ form {
     border-radius: 15px;
     background-color: white;
     box-shadow: 2px 2px 12px 8px rgba(0, 0, 0, 0.044);
-    width: 100%;
+
 }
 
 .activity_figure:hover {
@@ -435,9 +437,9 @@ form {
     padding-bottom: 10px;
 }
 
-@media only screen and (max-width : 992px)and (min-width: 767px) {
+@media only screen and (max-width : 992px)and (min-width: 768px) {
     .media {
-        padding: 0 35px 35px 35px;
+        padding: 0 35px 15px 80px;
     }
 
     .header_h2 {
@@ -445,13 +447,53 @@ form {
         margin: 0 0 10px 10px;
     }
 
+    h3 {
+        font-size: 10px;
+    }
+
+    p {
+        font-size: 9px;
+    }
+
+    .categorie_title {
+        padding: 30px 80px 0 90px;
+    }
+
+    .icon_info_section {
+        padding: 0 0 0 80px;
+    }
+
     .moretargetlodging {
         text-align: center;
-        margin-top: 25px;
+        margin: 0 0 35px 0;
+    }
+
+    .section_box {
+        padding: 0 50px 0 50px;
+    }
+
+    .target_figure {
+        width: 176px;
+    }
+
+    .target_article {
+        flex: none;
+    }
+
+    .target_figcaption {
+        gap: 0px;
     }
 
     .popular_header {
-        width: 100%;
+        padding: 0 0 0 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .popular_media {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 30px 65px 0 65px;
     }
 
     .filter_btn {
@@ -524,6 +566,12 @@ form {
 
     .filter_container {
         gap: 6px;
+        padding: 0 0 0 80px;
+    }
+
+    .filter_btn:hover {
+        background-color: var(--greybg);
+        transition: ease 0.3s;
     }
 
     .main_box {
@@ -534,29 +582,53 @@ form {
         padding-right: 30px;
     }
 
+    .activity_figure {
+        width: 160px;
+    }
+
     .popular_lodging {
         background-color: white;
         flex-direction: row;
-        padding: 30px 0 0 0;
-
+        padding: 10px 0 0 0;
     }
 
     .activity {
-        flex-direction: column;
-        padding: 35px;
-    }
-
-    .activity_figure {
-        display: flex;
-        width: 70%;
-        margin: auto;
-    }
-
-    .popular_header {
-        display: flex;
+        padding: 0 30px 0 30px;
         justify-content: space-between;
-        width: 100%;
-        margin-bottom: 35px;
+        gap: 0px;
+    }
+
+    .activity_box {
+        width: auto;
+    }
+
+    .activity_img {
+        height: 180px;
+    }
+
+    .activity_img_fort {
+        height: 70px;
+    }
+
+    .activity_img_island {
+        height: 70px;
+    }
+
+    .activity_img_notre-dame {
+        height: 70px;
+    }
+
+    .activity_figcaption {
+        padding: 8px;
+    }
+
+    .activity_img_longchamp {
+        height: 70px;
+    }
+
+    .double_article {
+        justify-content: normal;
+        gap: 10px;
     }
 
     .categorie_title_2 {
@@ -575,51 +647,7 @@ form {
     }
 
     .activities_title {
-        text-align: center;
-        margin-top: 60px;
-    }
-
-    .activity_box {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .activity_img {
-        height: 180px;
-        width: 50%;
-        border-radius: 15px 0 0 15px;
-    }
-
-    .article_img {
-        width: 100%;
-    }
-
-    .activity_img_fort {
-        height: 180px;
-        width: 50%;
-        border-radius: 15px 0 0 15px;
-    }
-
-    .activity_img_notre-dame {
-        height: 180px;
-        width: 50%;
-        border-radius: 15px 0 0 15px;
-    }
-
-    .activity_img_longchamp {
-        height: 180px;
-        width: 50%;
-        border-radius: 15px 0 0 15px;
-    }
-
-    .activity_img_island {
-        height: 180px;
-        width: 50%;
-        border-radius: 15px 0 0 15px;
-    }
-
-    .double_article {
-        gap: 40px;
+        padding: 70px 50px 40px 100px;
     }
 
     .footer_box {
@@ -672,8 +700,8 @@ form {
     }
 
     .info_icon {
-        width: 6%;
-        height: 6%;
+        width: 20px;
+        height: 15px;
         align-items: center;
     }
 
@@ -689,7 +717,7 @@ form {
 
     .aside_img {
         height: 130px;
-        width: 38%;
+        width: 30%;
     }
 
     .aside_figcaption {
@@ -740,6 +768,11 @@ form {
         margin: 0px;
     }
 
+    .filter_btn:hover {
+        background-color: var(--greybg);
+        transition: ease 0.3s;
+    }
+
     .main_box {
         flex-direction: column;
     }
@@ -762,7 +795,6 @@ form {
         margin: 0px;
         background-color: white;
         padding: 35px 30px 30px 30px;
-        flex-flow: wrap;
         gap: 20px;
     }
 
@@ -829,7 +861,6 @@ form {
     .activity_img_notre-dame {
         height: 120px;
         border-radius: 15px 15px 0 0;
-        object-position: top;
     }
 
     .activity_img_longchamp {
